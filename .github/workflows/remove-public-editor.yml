@@ -1,0 +1,93 @@
+name: Remove public editor controls
+
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-public-editor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  clean-public-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Strip editor from public index
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          before = s
+
+          # Remove the visible editor toolbar + its complete editing/moving/export script.
+          s, n = re.subn(
+              r'<div class="fx-editor" id="fx-editor">.*?</div><script>\s*\(function\(\)\{\s*const textKey=\'flaix_landing_v4_text_edits\';.*?\}\)\(\);\s*</script>',
+              '', s, flags=re.S
+          )
+          if n != 1:
+              raise SystemExit(f'Expected one editor UI/script block, removed {n}')
+
+          # Remove all public editing/moving hooks from the HTML.
+          s = re.sub(r'\sdata-fx-editable="1"', '', s)
+          s = re.sub(r'\sdata-fx-movable="1"', '', s)
+          s = re.sub(r'\scontenteditable=(?:"[^"]*"|\'[^\']*\')', '', s, flags=re.I)
+          s = re.sub(r'\sdraggable=(?:"[^"]*"|\'[^\']*\')', '', s, flags=re.I)
+
+          # Remove editor-only CSS rules from the mixed style block.
+          editor_rules = [
+              r'\.fx-editor\{[^{}]*\}',
+              r'\.fx-editor button\{[^{}]*\}',
+              r'\.fx-editor button\.secondary\{[^{}]*\}',
+              r'\.fx-editing \[data-fx-editable="1"\]\{[^{}]*\}',
+              r'\.fx-editing \[data-fx-editable="1"\]:focus\{[^{}]*\}',
+              r'\.fx-editor-status\{[^{}]*\}',
+              r'\.fx-editor button\.active\{[^{}]*\}',
+          ]
+          for pat in editor_rules:
+              s = re.sub(pat, '', s)
+          # Remove the editor line inside the mobile media query, preserving the other responsive rules.
+          s = re.sub(r'\s*\.fx-editor\{left:10px;right:10px;bottom:10px;justify-content:center;flex-wrap:wrap\}', '', s)
+
+          # Remove the dedicated move-mode style block wholesale.
+          s = re.sub(
+              r'<style>\s*/\* ===== FLAIX layout edit mode ===== \*/.*?</style>',
+              '', s, flags=re.S
+          )
+
+          # Remove dormant move-mode guards/rules from normal interaction code/CSS.
+          s = s.replace("if(document.body.classList.contains('fx-move-mode')) return;", '')
+          s = re.sub(r'\.fx-move-mode\s+[^\{]+\{[^{}]*\}', '', s)
+
+          # Production safety checks.
+          forbidden = [
+              'id="fx-editor"', 'fx-edit-toggle', 'fx-move-toggle', 'fx-reset-layout',
+              'fx-save', 'fx-export', 'flaix_landing_v4_text_edits',
+              'flaix_landing_v4_positions', 'data-fx-editable=', 'data-fx-movable=',
+              'ÉDITER', 'DÉPLACER', 'RESET POSITIONS', 'EXPORTER HTML'
+          ]
+          remaining = [x for x in forbidden if x in s]
+          if remaining:
+              raise SystemExit('Editor remnants remain: ' + ', '.join(remaining))
+          if s == before:
+              raise SystemExit('No changes made')
+
+          p.write_text(s, encoding='utf-8')
+          print('index.html cleaned successfully')
+          PY
+      - name: Commit production-safe index
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Remove editor controls from public site"
+          git push origin HEAD:main
