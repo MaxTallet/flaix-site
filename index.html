@@ -4429,49 +4429,16 @@ section[data-ch] .head-block h2{
 .offer-link{display:inline-block;margin-top:18px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px;font-weight:600}
 .offer-link:hover{color:var(--accent);border-color:var(--accent)}
 /* editor */
-.fx-editor{position:fixed;right:18px;bottom:18px;z-index:99999;background:rgba(12,13,18,.92);color:white;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:10px;display:flex;gap:7px;box-shadow:0 18px 50px rgba(12,13,18,.2);backdrop-filter:blur(14px)}
-.fx-editor button{border:0;border-radius:9px;padding:10px 12px;background:#fff;color:#0C0D12;font:600 11px/1 'Urbanist',sans-serif;cursor:pointer}
-.fx-editor button.secondary{background:rgba(255,255,255,.12);color:#fff}
-.fx-editing [data-fx-editable="1"]{outline:1px dashed rgba(91,99,230,.35);outline-offset:3px;border-radius:3px}
-.fx-editing [data-fx-editable="1"]:focus{outline:2px solid #5B63E6;background:rgba(91,99,230,.05)}
-.fx-editor-status{align-self:center;font:500 10px/1 'JetBrains Mono',monospace;color:rgba(255,255,255,.62);padding:0 4px}
+
+
+
+
+
+
 @media(max-width:760px){
   .hero-offer-strip{grid-template-columns:1fr}
   .hero-offer-strip a+a{border-left:0;border-top:1px solid var(--line)}
-  .fx-editor{left:10px;right:10px;bottom:10px;justify-content:center;flex-wrap:wrap}
-}
-</style><style>
-/* ===== FLAIX layout edit mode ===== */
-.fx-move-mode [data-fx-movable="1"]{
-  position:relative;
-  cursor:move;
-  outline:1px dashed rgba(91,99,230,.28);
-  outline-offset:4px;
-}
-.fx-move-mode [data-fx-movable="1"]:hover{
-  outline-color:rgba(91,99,230,.7);
-}
-.fx-move-mode [data-fx-movable="1"]::after{
-  content:"↕ déplacer";
-  position:absolute;
-  top:-24px;
-  right:0;
-  z-index:5;
-  padding:4px 7px;
-  border-radius:7px;
-  background:rgba(12,13,18,.86);
-  color:#fff;
-  font:500 9px/1 'JetBrains Mono',monospace;
-  letter-spacing:.04em;
-  pointer-events:none;
-  opacity:0;
-  transition:opacity .15s ease;
-  white-space:nowrap;
-}
-.fx-move-mode [data-fx-movable="1"]:hover::after{opacity:1}
-.fx-editor button.active{
-  background:#5B63E6;
-  color:#fff;
+  
 }
 </style><style>
 /* FLAIX offer hierarchy refinement — structure unchanged */
@@ -5052,15 +5019,8 @@ button:focus-visible{
 }
 
 /* Internal editor must never be disrupted by hover motion */
-.fx-move-mode .fx-unified-card:hover{
-  transform:none!important;
-  box-shadow:inherit!important;
-}
-.fx-move-mode .fx-unified-card .fx-card-glow,
-.fx-move-mode .fx-unified-card .fx-card-topline{
-  opacity:0!important;
-  transform:scaleX(0)!important;
-}
+
+
 
 /* Non-card components keep their own validated original behaviour:
    chips, list rows, trust cells, buttons. */
@@ -5132,10 +5092,7 @@ button:focus-visible{
 }
 
 /* En mode déplacement interne : aucun effet ne doit gêner l'édition */
-.fx-move-mode #confiance .trust .cell.fx-unified-card:hover{
-  transform:none!important;
-  box-shadow:none!important;
-}
+
 </style><style>
 /* ============================================================
    FLAIX · V8 — SECTION 09
@@ -5208,12 +5165,12 @@ button:focus-visible{
 <div class="core"><div class="breathe"><div class="g g1"></div><div class="g g2"></div></div></div>
 </div>
 <div class="wrap">
-<p class="tagline" data-en="Our agents explore your company's knowledge, detect opportunities, produce, and capitalise on what works. A memory that grows, a stronger company with every case." data-fx-editable="1" data-fx-movable="1">Nos agents explorent votre patrimoine, y détectent des opportunités, produisent et capitalisent ce qui fonctionne.</p>
-<h1 data-en="FLAIX puts to work&lt;br/&gt;everything your company already knows." data-fx-editable="1" data-fx-movable="1">FLAIX met au travail<br/>tout ce que votre entreprise sait déjà.</h1>
-<p class="sub" data-en="Your teams already have AI in their hands. FLAIX helps them use it better in their actual work, produce better and faster, then turn what works into a capability for the whole company." data-fx-editable="1">Vos équipes ont déjà l’IA entre les mains. FLAIX les aide à mieux l’utiliser dans leur métier, à produire mieux et plus vite, puis à transformer ce qui marche en capacité de la maison.</p>
-<p class="kpis" data-en="Real use cases&lt;span&gt;/&lt;/span&gt;Practical methods&lt;span&gt;/&lt;/span&gt;Shared capability" data-fx-editable="1"><b>Usages réels</b><span>/</span><b>Méthodes concrètes</b><span>/</span><b>Capitalisation</b></p>
-<a class="btn" data-fx-movable="1" href="mailto:maxime@flaix.ai?subject=Planifier%20un%20appel%20avec%20FLAIX"><span class="gd"></span>Planifier un appel</a>
-<p class="cta-note" data-en="The first conversation starts with your teams, their tools and what they actually need to produce." data-fx-editable="1">Le premier échange part de vos équipes, de leurs outils et de ce qu’elles doivent réellement produire.</p>
+<p class="tagline" data-en="Our agents explore your company's knowledge, detect opportunities, produce, and capitalise on what works. A memory that grows, a stronger company with every case.">Nos agents explorent votre patrimoine, y détectent des opportunités, produisent et capitalisent ce qui fonctionne.</p>
+<h1 data-en="FLAIX puts to work&lt;br/&gt;everything your company already knows.">FLAIX met au travail<br/>tout ce que votre entreprise sait déjà.</h1>
+<p class="sub" data-en="Your teams already have AI in their hands. FLAIX helps them use it better in their actual work, produce better and faster, then turn what works into a capability for the whole company.">Vos équipes ont déjà l’IA entre les mains. FLAIX les aide à mieux l’utiliser dans leur métier, à produire mieux et plus vite, puis à transformer ce qui marche en capacité de la maison.</p>
+<p class="kpis" data-en="Real use cases&lt;span&gt;/&lt;/span&gt;Practical methods&lt;span&gt;/&lt;/span&gt;Shared capability"><b>Usages réels</b><span>/</span><b>Méthodes concrètes</b><span>/</span><b>Capitalisation</b></p>
+<a class="btn" href="mailto:maxime@flaix.ai?subject=Planifier%20un%20appel%20avec%20FLAIX"><span class="gd"></span>Planifier un appel</a>
+<p class="cta-note" data-en="The first conversation starts with your teams, their tools and what they actually need to produce.">Le premier échange part de vos équipes, de leurs outils et de ce qu’elles doivent réellement produire.</p>
 <!-- DEMO -->
 <div class="demo reveal">
 <div class="window">
@@ -5241,7 +5198,7 @@ button:focus-visible{
 <ul class="opp-ins" id="oppIns"><li class="on">Budget estimé 120 k€, cible CSP+</li><li class="on">Historique : 2 campagnes signées en 2024</li><li class="on">Angle : offre exclusive Q3, format audio</li></ul>
 <div class="opp-mail on" id="oppmail">
 <div class="opp-mail-h"><span class="mono" data-en="Follow-up email, ready">Mail de relance, prêt</span></div>
-<p data-fx-editable="1" id="oppMailP">Bonjour, en analysant votre présence média, j'ai identifié une fenêtre idéale pour Q3…</p>
+<p id="oppMailP">Bonjour, en analysant votre présence média, j'ai identifié une fenêtre idéale pour Q3…</p>
 <div class="opp-send"><span class="gd2"></span>Envoyer</div>
 </div>
 </div>
@@ -5252,124 +5209,124 @@ button:focus-visible{
 </div>
 </section><section class="offer-intro" data-ch="01" id="offre">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1">
-<div class="chapter-title" data-fx-editable="1">comment commencer</div>
+<div aria-hidden="true" class="chapter-head">
+<div class="chapter-title">comment commencer</div>
 <div class="chapter-num">01</div>
 </div>
-<div class="eyebrow reveal" data-fx-editable="1" data-fx-movable="1">l'offre</div>
-<h2 class="lead-xl reveal" data-fx-editable="1" data-fx-movable="1">Commencer simplement.<br/>Aller aussi loin que nécessaire.</h2>
-<p class="intro-copy reveal" data-fx-editable="1" data-fx-movable="1">Commencer par un métier. Structurer ce qui fonctionne. Déployer seulement ce qui mérite de l’être.</p>
+<div class="eyebrow reveal">l'offre</div>
+<h2 class="lead-xl reveal">Commencer simplement.<br/>Aller aussi loin que nécessaire.</h2>
+<p class="intro-copy reveal">Commencer par un métier. Structurer ce qui fonctionne. Déployer seulement ce qui mérite de l’être.</p>
 <div class="offer-grid">
-<div class="offer-card reveal fx-unified-card" data-fx-movable="1">
-<div class="num" data-fx-editable="1">01 · SESSION</div>
-<h3 data-fx-editable="1" data-fx-movable="1">Session IA métier</h3>
-<div class="offer-price" data-fx-editable="1">1 500 € HT</div>
-<div class="offer-meta" data-fx-editable="1">4 heures · une équipe · un métier</div>
-<p data-fx-editable="1">Paramétrer l’IA avec le bon contexte, les bonnes instructions et les bons repères, puis la mettre au travail sur des situations concrètes avec l’équipe.</p>
-<a aria-disabled="true" class="offer-link offer-action-static" data-fx-movable="1">Paramétrer et mettre au travail</a>
+<div class="offer-card reveal fx-unified-card">
+<div class="num">01 · SESSION</div>
+<h3>Session IA métier</h3>
+<div class="offer-price">1 500 € HT</div>
+<div class="offer-meta">4 heures · une équipe · un métier</div>
+<p>Paramétrer l’IA avec le bon contexte, les bonnes instructions et les bons repères, puis la mettre au travail sur des situations concrètes avec l’équipe.</p>
+<a aria-disabled="true" class="offer-link offer-action-static">Paramétrer et mettre au travail</a>
 </div>
-<div class="offer-card reveal fx-unified-card" data-fx-movable="1">
-<div class="num" data-fx-editable="1">02 · PILOTE</div>
-<h3 data-fx-editable="1" data-fx-movable="1">Pilote IA métier</h3>
-<div class="offer-price" data-fx-editable="1">4 500 € HT</div>
-<div class="offer-meta" data-fx-editable="1">3 sessions de 4h sur 2 semaines</div>
-<p data-fx-editable="1">Transformer un premier périmètre métier et structurer ce qui mérite de devenir réutilisable.</p>
-<a aria-disabled="true" class="offer-link offer-action-static" data-fx-movable="1">Transformer et capitaliser</a>
+<div class="offer-card reveal fx-unified-card">
+<div class="num">02 · PILOTE</div>
+<h3>Pilote IA métier</h3>
+<div class="offer-price">4 500 € HT</div>
+<div class="offer-meta">3 sessions de 4h sur 2 semaines</div>
+<p>Transformer un premier périmètre métier et structurer ce qui mérite de devenir réutilisable.</p>
+<a aria-disabled="true" class="offer-link offer-action-static">Transformer et capitaliser</a>
 </div>
-<div class="offer-card reveal fx-unified-card" data-fx-movable="1">
-<div class="num" data-fx-editable="1">03 · DÉPLOIEMENT</div>
-<h3 data-fx-editable="1" data-fx-movable="1">Déploiement FLAIX</h3>
-<div class="offer-price" data-fx-editable="1">Sur mesure</div>
-<div class="offer-meta" data-fx-editable="1">selon le périmètre et les enjeux</div>
-<p data-fx-editable="1">Étendre ce qui fonctionne aux standards, à la mémoire, aux workflows, aux automatisations et aux agents.</p>
-<a aria-disabled="true" class="offer-link offer-action-static" data-fx-movable="1">Déployer à l’échelle</a>
+<div class="offer-card reveal fx-unified-card">
+<div class="num">03 · DÉPLOIEMENT</div>
+<h3>Déploiement FLAIX</h3>
+<div class="offer-price">Sur mesure</div>
+<div class="offer-meta">selon le périmètre et les enjeux</div>
+<p>Étendre ce qui fonctionne aux standards, à la mémoire, aux workflows, aux automatisations et aux agents.</p>
+<a aria-disabled="true" class="offer-link offer-action-static">Déployer à l’échelle</a>
 </div>
 </div>
 <div class="offer-band reveal">
 <div class="label">LE PRINCIPE</div>
-<p data-fx-editable="1"><b>Le gain individuel peut devenir une capacité de la maison.</b></p>
+<p><b>Le gain individuel peut devenir une capacité de la maison.</b></p>
 </div>
 </div>
 </section><section class="module-sec" data-ch="02" id="module-personnel">
 <div class="wrap module-shell">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">premier module de travail</div><div class="chapter-num">02</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">premier module de travail</div><div class="chapter-num">02</div></div>
 <div class="module-copy reveal">
-<div class="eyebrow" data-en="first working module" data-fx-editable="1" data-fx-movable="1">premier module de travail</div>
-<h2 data-en="Your personal AI.&lt;br&gt;A real work environment." data-fx-editable="1" data-fx-movable="1">Votre IA personnelle.<br/>Un environnement de travail.</h2>
-<p data-en="The same model can be generic or become a powerful work environment. The difference often comes from how it is organised, what context it receives and how the user works with it over time." data-fx-editable="1">Le même modèle peut rester générique ou devenir un environnement de travail puissant. La différence vient souvent de la manière dont il est organisé, du contexte qu’on lui donne et de la façon dont on travaille avec lui dans le temps.</p>
+<div class="eyebrow" data-en="first working module">premier module de travail</div>
+<h2 data-en="Your personal AI.&lt;br&gt;A real work environment.">Votre IA personnelle.<br/>Un environnement de travail.</h2>
+<p data-en="The same model can be generic or become a powerful work environment. The difference often comes from how it is organised, what context it receives and how the user works with it over time.">Le même modèle peut rester générique ou devenir un environnement de travail puissant. La différence vient souvent de la manière dont il est organisé, du contexte qu’on lui donne et de la façon dont on travaille avec lui dans le temps.</p>
 <div class="module-quote" data-en="&lt;b&gt;The quality of your AI depends heavily on the quality of the context, memory and organisation you give it.&lt;/b&gt;"><b>La qualité de votre IA dépend largement de la qualité du contexte, de la mémoire et de l’organisation que vous lui donnez.</b></div>
 </div>
 <div>
 <div class="dimension-grid">
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Organisation</div><div class="d-copy" data-fx-editable="1">Projets, espaces, dossiers, fichiers et logique de rangement.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Instructions</div><div class="d-copy" data-fx-editable="1">Ce que l’outil doit comprendre de votre rôle, de vos règles et de votre façon de travailler.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Contexte</div><div class="d-copy" data-fx-editable="1">Objectif, contraintes, métier, situation, interlocuteur, historique utile.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Connaissance</div><div class="d-copy" data-fx-editable="1">Documents, références, exemples, données et standards de la maison.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Prompt</div><div class="d-copy" data-fx-editable="1">Formuler clairement, structurer la demande et donner les bons critères.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Itération</div><div class="d-copy" data-fx-editable="1">Rebondir, creuser, corriger, affûter. La bonne réponse se construit rarement en un coup.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Production</div><div class="d-copy" data-fx-editable="1">Texte, analyse, tableaux, présentations, code, fichiers et livrables réellement exploitables.</div></div>
-<div class="dimension reveal fx-unified-card"><div class="d-title" data-fx-editable="1">Connexion</div><div class="d-copy" data-fx-editable="1">Relier l’IA aux bonnes sources et outils lorsque le cadre de l’entreprise le permet.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Organisation</div><div class="d-copy">Projets, espaces, dossiers, fichiers et logique de rangement.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Instructions</div><div class="d-copy">Ce que l’outil doit comprendre de votre rôle, de vos règles et de votre façon de travailler.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Contexte</div><div class="d-copy">Objectif, contraintes, métier, situation, interlocuteur, historique utile.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Connaissance</div><div class="d-copy">Documents, références, exemples, données et standards de la maison.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Prompt</div><div class="d-copy">Formuler clairement, structurer la demande et donner les bons critères.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Itération</div><div class="d-copy">Rebondir, creuser, corriger, affûter. La bonne réponse se construit rarement en un coup.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Production</div><div class="d-copy">Texte, analyse, tableaux, présentations, code, fichiers et livrables réellement exploitables.</div></div>
+<div class="dimension reveal fx-unified-card"><div class="d-title">Connexion</div><div class="d-copy">Relier l’IA aux bonnes sources et outils lorsque le cadre de l’entreprise le permet.</div></div>
 </div>
 <div class="pingpong reveal">
 <div class="pp-label">la pratique flaix</div>
-<h3 data-fx-editable="1" data-fx-movable="1">Une pratique guidée et itérative.</h3>
-<p data-fx-editable="1">On structure, on teste, on affine, puis on réutilise. Ce qui compte, c’est une méthode de travail qui produit des résultats réellement utilisables.</p>
+<h3>Une pratique guidée et itérative.</h3>
+<p>On structure, on teste, on affine, puis on réutilise. Ce qui compte, c’est une méthode de travail qui produit des résultats réellement utilisables.</p>
 </div>
 </div>
 </div>
 </section><section class="work-sec" data-ch="03" id="travail-reel">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">le travail réel d'abord</div><div class="chapter-num">03</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">le travail réel d'abord</div><div class="chapter-num">03</div></div>
 <div class="head-block reveal">
-<div class="eyebrow" data-en="work first" data-fx-editable="1" data-fx-movable="1">le travail réel d'abord</div>
-<h2 data-en="What do you actually do all day?&lt;br&gt;That is where we start." data-fx-editable="1" data-fx-movable="1">Le métier d’abord.<br/>L’IA au bon endroit.</h2>
-<p class="lead" data-en="Not a generic maturity audit. We work with the team to understand the gestures, outputs, repetitions, searches and friction points that make up its actual job." data-fx-editable="1" data-fx-movable="1">Recherche, analyse, production, décision, capitalisation : on part du travail réel des équipes.</p>
+<div class="eyebrow" data-en="work first">le travail réel d'abord</div>
+<h2 data-en="What do you actually do all day?&lt;br&gt;That is where we start.">Le métier d’abord.<br/>L’IA au bon endroit.</h2>
+<p class="lead" data-en="Not a generic maturity audit. We work with the team to understand the gestures, outputs, repetitions, searches and friction points that make up its actual job.">Recherche, analyse, production, décision, capitalisation : on part du travail réel des équipes.</p>
 </div>
 <div class="work-flow">
-<div class="work-step reveal fx-unified-card" data-fx-movable="1"><div class="w-num" data-fx-editable="1">01</div><h3 data-fx-editable="1" data-fx-movable="1">Rechercher &amp; préparer</h3><p data-fx-editable="1">Entreprise, marché, historique, rendez-vous, information utile.</p></div>
-<div class="work-step reveal fx-unified-card" data-fx-movable="1"><div class="w-num" data-fx-editable="1">02</div><h3 data-fx-editable="1" data-fx-movable="1">Analyser &amp; décider</h3><p data-fx-editable="1">Brief, données, résultats, concurrence, hypothèses, recommandations.</p></div>
-<div class="work-step reveal fx-unified-card" data-fx-movable="1"><div class="w-num" data-fx-editable="1">03</div><h3 data-fx-editable="1" data-fx-movable="1">Produire</h3><p data-fx-editable="1">Présentations, propositions, emails, comptes rendus, tableaux et livrables.</p></div>
-<div class="work-step reveal fx-unified-card" data-fx-movable="1"><div class="w-num" data-fx-editable="1">04</div><h3 data-fx-editable="1" data-fx-movable="1">Capitaliser</h3><p data-fx-editable="1">Contexte, méthodes, standards, références, historique et bonnes pratiques.</p></div>
+<div class="work-step reveal fx-unified-card"><div class="w-num">01</div><h3>Rechercher &amp; préparer</h3><p>Entreprise, marché, historique, rendez-vous, information utile.</p></div>
+<div class="work-step reveal fx-unified-card"><div class="w-num">02</div><h3>Analyser &amp; décider</h3><p>Brief, données, résultats, concurrence, hypothèses, recommandations.</p></div>
+<div class="work-step reveal fx-unified-card"><div class="w-num">03</div><h3>Produire</h3><p>Présentations, propositions, emails, comptes rendus, tableaux et livrables.</p></div>
+<div class="work-step reveal fx-unified-card"><div class="w-num">04</div><h3>Capitaliser</h3><p>Contexte, méthodes, standards, références, historique et bonnes pratiques.</p></div>
 </div>
 </div>
 </section><section class="asset-sec" data-ch="04" id="assets">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">ce qui reste après l'atelier</div><div class="chapter-num">04</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">ce qui reste après l'atelier</div><div class="chapter-num">04</div></div>
 <div class="head-block reveal">
-<div class="eyebrow" data-en="what remains" data-fx-editable="1" data-fx-movable="1">ce qui reste après l'atelier</div>
-<h2 data-en="Every session must create an asset." data-fx-editable="1" data-fx-movable="1">Ce qui fonctionne doit rester dans l’entreprise.</h2>
-<p class="lead" data-en="FLAIX is designed so that the work done with one team does not disappear. Useful methods, prompts, playbooks and knowledge can live in a dedicated company space and improve over time." data-fx-editable="1" data-fx-movable="1">Un gain individuel peut devenir une capacité de la maison.</p>
+<div class="eyebrow" data-en="what remains">ce qui reste après l'atelier</div>
+<h2 data-en="Every session must create an asset.">Ce qui fonctionne doit rester dans l’entreprise.</h2>
+<p class="lead" data-en="FLAIX is designed so that the work done with one team does not disappear. Useful methods, prompts, playbooks and knowledge can live in a dedicated company space and improve over time.">Un gain individuel peut devenir une capacité de la maison.</p>
 </div>
 <div class="asset-grid">
-<div class="asset-card reveal fx-unified-card" data-fx-movable="1"><div class="asset-k" data-fx-editable="1">actifs métier</div><h3 data-fx-editable="1" data-fx-movable="1">Prompts, templates, instructions</h3><p data-fx-editable="1">Les éléments utiles sont conservés pour éviter de repartir de zéro.</p></div>
-<div class="asset-card reveal fx-unified-card" data-fx-movable="1"><div class="asset-k" data-fx-editable="1">standards</div><h3 data-fx-editable="1" data-fx-movable="1">Méthodes &amp; standards de maison</h3><p data-fx-editable="1">Ce qui marche peut devenir une manière commune de produire et de travailler.</p></div>
-<div class="asset-card reveal fx-unified-card" data-fx-movable="1"><div class="asset-k" data-fx-editable="1">suite</div><h3 data-fx-editable="1" data-fx-movable="1">Vers les workflows et les systèmes</h3><p data-fx-editable="1">Lorsque cela crée de la valeur, ces actifs peuvent nourrir mémoire, automatisations et agents.</p></div>
+<div class="asset-card reveal fx-unified-card"><div class="asset-k">actifs métier</div><h3>Prompts, templates, instructions</h3><p>Les éléments utiles sont conservés pour éviter de repartir de zéro.</p></div>
+<div class="asset-card reveal fx-unified-card"><div class="asset-k">standards</div><h3>Méthodes &amp; standards de maison</h3><p>Ce qui marche peut devenir une manière commune de produire et de travailler.</p></div>
+<div class="asset-card reveal fx-unified-card"><div class="asset-k">suite</div><h3>Vers les workflows et les systèmes</h3><p>Lorsque cela crée de la valeur, ces actifs peuvent nourrir mémoire, automatisations et agents.</p></div>
 </div>
 </div>
 </section><section class="path-sec" data-ch="05" id="trajectoire">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">une progression</div><div class="chapter-num">05</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">une progression</div><div class="chapter-num">05</div></div>
 <div class="head-block center reveal">
-<div class="eyebrow" data-en="one trajectory" data-fx-editable="1" data-fx-movable="1">une progression</div>
-<h2 data-en="From individual use&lt;br&gt;to company capability." data-fx-editable="1" data-fx-movable="1">Du gain individuel<br/>à la capacité de la maison.</h2>
+<div class="eyebrow" data-en="one trajectory">une progression</div>
+<h2 data-en="From individual use&lt;br&gt;to company capability.">Du gain individuel<br/>à la capacité de la maison.</h2>
 </div>
 <div class="path-line">
-<div class="path-item reveal fx-unified-card"><div class="p-k" data-fx-editable="1">01</div><h3 data-fx-editable="1" data-fx-movable="1">Individus</h3><p data-fx-editable="1">Mieux exploiter les outils déjà disponibles.</p></div>
-<div class="path-item reveal fx-unified-card"><div class="p-k" data-fx-editable="1">02</div><h3 data-fx-editable="1" data-fx-movable="1">Usages</h3><p data-fx-editable="1">Transformer des situations de travail concrètes.</p></div>
-<div class="path-item reveal fx-unified-card"><div class="p-k" data-fx-editable="1">03</div><h3 data-fx-editable="1" data-fx-movable="1">Métiers</h3><p data-fx-editable="1">Structurer ce qui fonctionne dans un contexte précis.</p></div>
-<div class="path-item reveal fx-unified-card"><div class="p-k" data-fx-editable="1">04</div><h3 data-fx-editable="1" data-fx-movable="1">Équipes</h3><p data-fx-editable="1">Partager méthodes, standards et actifs utiles.</p></div>
-<div class="path-item reveal fx-unified-card"><div class="p-k" data-fx-editable="1">05</div><h3 data-fx-editable="1" data-fx-movable="1">Systèmes</h3><p data-fx-editable="1">Workflows, data, automatisations et agents lorsque cela vaut le coup.</p></div>
+<div class="path-item reveal fx-unified-card"><div class="p-k">01</div><h3>Individus</h3><p>Mieux exploiter les outils déjà disponibles.</p></div>
+<div class="path-item reveal fx-unified-card"><div class="p-k">02</div><h3>Usages</h3><p>Transformer des situations de travail concrètes.</p></div>
+<div class="path-item reveal fx-unified-card"><div class="p-k">03</div><h3>Métiers</h3><p>Structurer ce qui fonctionne dans un contexte précis.</p></div>
+<div class="path-item reveal fx-unified-card"><div class="p-k">04</div><h3>Équipes</h3><p>Partager méthodes, standards et actifs utiles.</p></div>
+<div class="path-item reveal fx-unified-card"><div class="p-k">05</div><h3>Systèmes</h3><p>Workflows, data, automatisations et agents lorsque cela vaut le coup.</p></div>
 </div>
 </div>
 </section>
 <!-- ARCHITECTURE -->
 <section class="sec" data-ch="06" id="vision">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">de la connaissance à l'action</div><div class="chapter-num">06</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">de la connaissance à l'action</div><div class="chapter-num">06</div></div>
 <div class="head-block center reveal">
-<div class="eyebrow" data-en="when you need to go further" data-fx-editable="1" data-fx-movable="1">la vision</div>
-<h2 class="oneline" data-en="From your data to ready-to-use action." data-fx-editable="1" data-fx-movable="1">De vos données jusqu’à l’action prête.</h2>
-<p class="lead" data-en="Three layers in sequence: your company's material, the context that connects it, and the action your agents produce." data-fx-editable="1" data-fx-movable="1">La matière de la maison, le contexte qui la relie et l’action que les équipes ou les systèmes peuvent produire.</p>
+<div class="eyebrow" data-en="when you need to go further">la vision</div>
+<h2 class="oneline" data-en="From your data to ready-to-use action.">De vos données jusqu’à l’action prête.</h2>
+<p class="lead" data-en="Three layers in sequence: your company's material, the context that connects it, and the action your agents produce.">La matière de la maison, le contexte qui la relie et l’action que les équipes ou les systèmes peuvent produire.</p>
 </div>
 <div class="cards">
 <div class="card reveal fx-unified-card">
@@ -5377,10 +5334,10 @@ button:focus-visible{
 <g stroke="#D2D5E0" stroke-width="1.2"><line x1="56" x2="56" y1="22" y2="94"></line><line x1="124" x2="124" y1="22" y2="94"></line><line x1="192" x2="192" y1="22" y2="94"></line><line x1="248" x2="248" y1="22" y2="94"></line><line x1="56" x2="248" y1="36" y2="36"></line><line x1="56" x2="248" y1="58" y2="58"></line><line x1="56" x2="248" y1="80" y2="80"></line></g>
 <circle cx="56" cy="36" fill="#6E97FF" r="4"></circle><circle cx="124" cy="58" fill="#AD8CFF" r="4"></circle><circle cx="192" cy="36" fill="#6E97FF" r="4"></circle><circle cx="248" cy="80" fill="#FF9FE6" r="4"></circle>
 </svg></div>
-<div class="step" data-en="YOUR DATA" data-fx-editable="1">VOS DONNÉES</div>
-<h3 data-en="They stay with you" data-fx-editable="1" data-fx-movable="1">Elles restent chez vous</h3>
-<p data-en="CRM, documents, emails, history, domain know-how. The agent plugs in where your data already lives." data-fx-editable="1">CRM, documents, e-mails, historiques, savoir métier. L'agent se branche là où vos données vivent déjà.</p>
-<div class="out2" data-en="Nothing to move, everything stays with you." data-fx-editable="1">Rien à déménager, tout reste chez vous.</div>
+<div class="step" data-en="YOUR DATA">VOS DONNÉES</div>
+<h3 data-en="They stay with you">Elles restent chez vous</h3>
+<p data-en="CRM, documents, emails, history, domain know-how. The agent plugs in where your data already lives.">CRM, documents, e-mails, historiques, savoir métier. L'agent se branche là où vos données vivent déjà.</p>
+<div class="out2" data-en="Nothing to move, everything stays with you.">Rien à déménager, tout reste chez vous.</div>
 </div>
 <div class="card reveal fx-unified-card">
 <div class="illus"><svg fill="none" viewbox="0 0 300 116">
@@ -5388,20 +5345,20 @@ button:focus-visible{
 <rect fill="#E8EAF1" height="6" rx="3" width="100" x="74" y="38"></rect><rect fill="#E8EAF1" height="6" rx="3" width="130" x="74" y="51"></rect><rect fill="#E8EAF1" height="6" rx="3" width="80" x="74" y="64"></rect>
 <rect fill="#F0F2F8" height="30" rx="6" width="30" x="196" y="38"></rect><circle cx="230" cy="30" fill="#AD8CFF" r="6"></circle>
 </svg></div>
-<div class="step" data-en="THE CONTEXT" data-fx-editable="1">LE CONTEXTE</div>
-<h3 data-en="Everything connects" data-fx-editable="1" data-fx-movable="1">Tout se relie</h3>
-<p data-en="Clients, offers, decisions, business rules. The agent moves through your company's network, not isolated files." data-fx-editable="1">Clients, offres, décisions, règles métier. L'agent navigue dans le réseau de la maison, pas dans des fichiers isolés.</p>
-<div class="out2" data-en="Knowledge becomes usable." data-fx-editable="1">Le savoir devient exploitable.</div>
+<div class="step" data-en="THE CONTEXT">LE CONTEXTE</div>
+<h3 data-en="Everything connects">Tout se relie</h3>
+<p data-en="Clients, offers, decisions, business rules. The agent moves through your company's network, not isolated files.">Clients, offres, décisions, règles métier. L'agent navigue dans le réseau de la maison, pas dans des fichiers isolés.</p>
+<div class="out2" data-en="Knowledge becomes usable.">Le savoir devient exploitable.</div>
 </div>
 <div class="card reveal fx-unified-card">
 <div class="illus"><svg fill="none" viewbox="0 0 300 116">
 <path d="M78 40 H150 a15 15 0 0 1 15 15 a15 15 0 0 0 15 15 H222" fill="none" stroke="#D2D5E0" stroke-width="1.4"></path>
 <circle cx="78" cy="40" fill="#fff" r="9" stroke="#6E97FF" stroke-width="1.4"></circle><circle cx="222" cy="70" fill="#fff" r="9" stroke="#FF9FE6" stroke-width="1.4"></circle><circle cx="150" cy="40" fill="#AD8CFF" r="4.5"></circle>
 </svg></div>
-<div class="step" data-en="THE ACTION" data-fx-editable="1">L'ACTION</div>
-<h3 data-en="The ready deliverable" data-fx-editable="1" data-fx-movable="1">Le livrable prêt</h3>
-<p data-en="Quote, recommendation, reply, follow-up, produced pixel-perfect to your standard." data-fx-editable="1">Devis, recommandation, réponse, relance, produits au pixel près dans votre standard.</p>
-<div class="out2" data-en="Ready to send, right away." data-fx-editable="1">Prêt à envoyer, tout de suite.</div>
+<div class="step" data-en="THE ACTION">L'ACTION</div>
+<h3 data-en="The ready deliverable">Le livrable prêt</h3>
+<p data-en="Quote, recommendation, reply, follow-up, produced pixel-perfect to your standard.">Devis, recommandation, réponse, relance, produits au pixel près dans votre standard.</p>
+<div class="out2" data-en="Ready to send, right away.">Prêt à envoyer, tout de suite.</div>
 </div>
 </div>
 </div>
@@ -5414,16 +5371,16 @@ button:focus-visible{
 <!-- PREUVE -->
 <section class="sec" data-ch="07" id="preuve">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">la preuve</div><div class="chapter-num">07</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">la preuve</div><div class="chapter-num">07</div></div>
 <div class="head-block center reveal">
-<div class="eyebrow" data-en="the proof" data-fx-editable="1" data-fx-movable="1">la preuve</div>
-<h2 class="oneline" data-en="A FLAIX agent already in production." data-fx-editable="1" data-fx-movable="1">Un système FLAIX déjà en production.</h2>
+<div class="eyebrow" data-en="the proof">la preuve</div>
+<h2 class="oneline" data-en="A FLAIX agent already in production.">Un système FLAIX déjà en production.</h2>
 </div>
 <div class="dist" style="grid-template-columns:1fr">
 <div class="dbox flx reveal fx-unified-card">
-<div class="tag" data-fx-editable="1" style="display:flex;align-items:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#34D399;display:inline-block"></span>PLS Media · en production</div>
-<h3 data-en="The rep briefs, the agent produces the action." data-fx-editable="1" data-fx-movable="1">Le commercial brief, l'agent produit l'action.</h3>
-<p data-fx-editable="1">Chez PLS Media, le commercial donne un brief. Le système produit une recommandation à partir de la donnée de la maison, puis génère le devis, la présentation et l'email au standard de l'entreprise.</p>
+<div class="tag" style="display:flex;align-items:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#34D399;display:inline-block"></span>PLS Media · en production</div>
+<h3 data-en="The rep briefs, the agent produces the action.">Le commercial brief, l'agent produit l'action.</h3>
+<p>Chez PLS Media, le commercial donne un brief. Le système produit une recommandation à partir de la donnée de la maison, puis génère le devis, la présentation et l'email au standard de l'entreprise.</p>
 </div>
 </div>
 </div>
@@ -5431,29 +5388,29 @@ button:focus-visible{
 <!-- POUR QUI -->
 <section class="sec center tint" data-ch="08" id="pourqui">
 <div class="wrap reveal">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">pour qui</div><div class="chapter-num">08</div></div>
-<div class="eyebrow" data-en="who it's for" data-fx-editable="1" data-fx-movable="1">pour qui</div>
-<h2 data-en="Built for companies where data makes the difference." data-fx-editable="1" data-fx-movable="1">Pour les entreprises où le savoir métier fait la différence.</h2>
-<p class="lead" data-en="Anywhere knowledge, response speed and execution quality decide the outcome." data-fx-editable="1" data-fx-movable="1">Partout où le contexte, la qualité d'exécution et la capacité à capitaliser comptent.</p>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">pour qui</div><div class="chapter-num">08</div></div>
+<div class="eyebrow" data-en="who it's for">pour qui</div>
+<h2 data-en="Built for companies where data makes the difference.">Pour les entreprises où le savoir métier fait la différence.</h2>
+<p class="lead" data-en="Anywhere knowledge, response speed and execution quality decide the outcome.">Partout où le contexte, la qualité d'exécution et la capacité à capitaliser comptent.</p>
 <div class="chips"><div class="chip" data-en="Media &amp; sales houses">Régies &amp; médias</div><div class="chip" data-en="Agencies">Agences</div><div class="chip" data-en="B2B groups">Groupes B2B</div><div class="chip" data-en="Sales leadership">Directions commerciales</div><div class="chip" data-en="Consulting firms">Cabinets conseil</div></div>
 </div>
 </section>
 <!-- SÉCURITÉ & CONFORMITÉ -->
 <section class="sec" data-ch="09" id="confiance">
 <div class="wrap">
-<div aria-hidden="true" class="chapter-head" data-fx-movable="1"><div class="chapter-title" data-fx-editable="1">sécurité &amp; conformité</div><div class="chapter-num">09</div></div>
+<div aria-hidden="true" class="chapter-head"><div class="chapter-title">sécurité &amp; conformité</div><div class="chapter-num">09</div></div>
 <div class="head-block center reveal">
-<div class="eyebrow" data-en="security &amp; compliance" data-fx-editable="1" data-fx-movable="1">sécurité &amp; conformité</div>
-<h2 data-en="Built for your most demanding standards." data-fx-editable="1" data-fx-movable="1">Bâti pour vos exigences les plus strictes.</h2>
-<p class="lead" data-en="Compliance is framed from the design stage, and held at every step." data-fx-editable="1" data-fx-movable="1">La conformité est cadrée dès la conception, et tenue à chaque étape.</p>
+<div class="eyebrow" data-en="security &amp; compliance">sécurité &amp; conformité</div>
+<h2 data-en="Built for your most demanding standards.">Bâti pour vos exigences les plus strictes.</h2>
+<p class="lead" data-en="Compliance is framed from the design stage, and held at every step.">La conformité est cadrée dès la conception, et tenue à chaque étape.</p>
 </div>
 <div class="trust reveal">
-<div class="cell fx-unified-card"><div class="lab" data-fx-editable="1">Hébergement</div><h3 data-en="Sovereign, your choice" data-fx-editable="1" data-fx-movable="1">Souverain, au choix</h3><p data-en="France or Europe to your requirements. OVH, AWS Paris or your own cloud: your data stays where you decide." data-fx-editable="1">France ou Europe selon vos exigences. OVH, AWS Paris ou votre propre cloud : vos données restent là où vous le décidez.</p></div>
-<div class="cell fx-unified-card"><div class="lab" data-fx-editable="1">Environnement</div><h3 data-en="Dedicated instance" data-fx-editable="1" data-fx-movable="1">Instance dédiée</h3><p data-en="An environment reserved for your company, isolated, just for you." data-fx-editable="1">Un environnement réservé à votre maison, isolé, rien que pour vous.</p></div>
-<div class="cell fx-unified-card"><div class="lab" data-fx-editable="1">Données</div><h3 data-en="Zero data retention" data-fx-editable="1" data-fx-movable="1">Zero data retention</h3><p data-en="Your data stays walled to your use, excluded from any third-party model training." data-fx-editable="1">Vos données restent cloisonnées à votre usage, exclues de tout entraînement de modèle tiers.</p></div>
-<div class="cell fx-unified-card"><div class="lab" data-fx-editable="1">RGPD</div><h3 data-en="Compliant, governed" data-fx-editable="1" data-fx-movable="1">Conforme, encadré</h3><p data-en="Processor under Article 28, governed by a DPA." data-fx-editable="1">Sous-traitant au sens de l'article 28, encadré par un DPA.</p></div>
-<div class="cell fx-unified-card"><div class="lab" data-fx-editable="1">AI Act</div><h3 data-en="European framework" data-fx-editable="1" data-fx-movable="1">Cadre européen</h3><p data-en="Limited-risk system, with human validation at every step." data-fx-editable="1">Système à risque limité, avec validation humaine à chaque étape.</p></div>
-<div class="cell fx-unified-card"><div class="lab" data-fx-editable="1">Cybersécurité</div><h3 data-en="End-to-end encrypted" data-fx-editable="1" data-fx-movable="1">Chiffré de bout en bout</h3><p data-en="Encryption in transit and at rest, strictly controlled access." data-fx-editable="1">Chiffrement en transit et au repos, accès strictement contrôlés.</p></div>
+<div class="cell fx-unified-card"><div class="lab">Hébergement</div><h3 data-en="Sovereign, your choice">Souverain, au choix</h3><p data-en="France or Europe to your requirements. OVH, AWS Paris or your own cloud: your data stays where you decide.">France ou Europe selon vos exigences. OVH, AWS Paris ou votre propre cloud : vos données restent là où vous le décidez.</p></div>
+<div class="cell fx-unified-card"><div class="lab">Environnement</div><h3 data-en="Dedicated instance">Instance dédiée</h3><p data-en="An environment reserved for your company, isolated, just for you.">Un environnement réservé à votre maison, isolé, rien que pour vous.</p></div>
+<div class="cell fx-unified-card"><div class="lab">Données</div><h3 data-en="Zero data retention">Zero data retention</h3><p data-en="Your data stays walled to your use, excluded from any third-party model training.">Vos données restent cloisonnées à votre usage, exclues de tout entraînement de modèle tiers.</p></div>
+<div class="cell fx-unified-card"><div class="lab">RGPD</div><h3 data-en="Compliant, governed">Conforme, encadré</h3><p data-en="Processor under Article 28, governed by a DPA.">Sous-traitant au sens de l'article 28, encadré par un DPA.</p></div>
+<div class="cell fx-unified-card"><div class="lab">AI Act</div><h3 data-en="European framework">Cadre européen</h3><p data-en="Limited-risk system, with human validation at every step.">Système à risque limité, avec validation humaine à chaque étape.</p></div>
+<div class="cell fx-unified-card"><div class="lab">Cybersécurité</div><h3 data-en="End-to-end encrypted">Chiffré de bout en bout</h3><p data-en="Encryption in transit and at rest, strictly controlled access.">Chiffrement en transit et au repos, accès strictement contrôlés.</p></div>
 </div>
 </div>
 </section>
@@ -5665,7 +5622,7 @@ button:focus-visible{
 <a aria-label="Fermer" class="ml-backdrop" href="#"></a>
 <div aria-label="Mentions légales" aria-modal="true" class="ml-modal" role="dialog">
 <a aria-label="Fermer" class="ml-close" href="#">×</a>
-<h3 data-fx-movable="1">Mentions légales</h3>
+<h3>Mentions légales</h3>
 <div class="ml-sec">
 <h4>Éditeur du site</h4>
 <p><b>FLAIX</b>, EURL au capital de 1 000 €.<br/>
@@ -5745,155 +5702,7 @@ button:focus-visible{
   update();
 })();
 </script>
-<div class="fx-editor" id="fx-editor">
-<button id="fx-edit-toggle">ÉDITER</button><button class="secondary" id="fx-move-toggle">DÉPLACER</button><button class="secondary" id="fx-reset-layout">RESET POSITIONS</button>
-<button class="secondary" id="fx-save">SAUVEGARDER</button>
-<button class="secondary" id="fx-export">EXPORTER HTML</button>
-<span class="fx-editor-status" id="fx-status">lecture</span>
-</div><script>
-(function(){
-  const textKey='flaix_landing_v4_text_edits';
-  const posKey='flaix_landing_v4_positions';
-
-  const body=document.body;
-  const editBtn=document.getElementById('fx-edit-toggle');
-  const moveBtn=document.getElementById('fx-move-toggle');
-  const resetBtn=document.getElementById('fx-reset-layout');
-  const saveBtn=document.getElementById('fx-save');
-  const exportBtn=document.getElementById('fx-export');
-  const status=document.getElementById('fx-status');
-
-  const editables=[...document.querySelectorAll('[data-fx-editable="1"]')];
-  const movables=[...document.querySelectorAll('[data-fx-movable="1"]')];
-
-  editables.forEach((el,i)=>{ if(!el.dataset.fxId) el.dataset.fxId='fx-text-'+i; });
-  movables.forEach((el,i)=>{ el.dataset.fxMoveId='fx-move-'+i; });
-
-  let editing=false;
-  let moving=false;
-  let drag=null;
-
-  function loadText(){
-    try{
-      const data=JSON.parse(localStorage.getItem(textKey)||'{}');
-      editables.forEach(el=>{ if(data[el.dataset.fxId]!==undefined) el.innerHTML=data[el.dataset.fxId]; });
-    }catch(e){}
-  }
-
-  function loadPositions(){
-    try{
-      const data=JSON.parse(localStorage.getItem(posKey)||'{}');
-      movables.forEach(el=>{
-        const p=data[el.dataset.fxMoveId];
-        if(p){
-          el.dataset.fxX=p.x||0;
-          el.dataset.fxY=p.y||0;
-          el.style.transform=`translate(${p.x||0}px, ${p.y||0}px)`;
-        }
-      });
-    }catch(e){}
-  }
-
-  function saveAll(){
-    const text={};
-    editables.forEach(el=>text[el.dataset.fxId]=el.innerHTML);
-    localStorage.setItem(textKey,JSON.stringify(text));
-
-    const pos={};
-    movables.forEach(el=>{
-      pos[el.dataset.fxMoveId]={
-        x:parseFloat(el.dataset.fxX||'0'),
-        y:parseFloat(el.dataset.fxY||'0')
-      };
-    });
-    localStorage.setItem(posKey,JSON.stringify(pos));
-    status.textContent='sauvegardé';
-    setTimeout(()=>status.textContent=moving?'déplacement':(editing?'édition':'lecture'),1200);
-  }
-
-  function setEdit(on){
-    editing=on;
-    if(on && moving) setMove(false);
-    body.classList.toggle('fx-editing',on);
-    editables.forEach(el=>el.contentEditable=on?'true':'false');
-    editBtn.textContent=on?'QUITTER ÉDITION':'ÉDITER';
-    editBtn.classList.toggle('active',on);
-    status.textContent=on?'édition':(moving?'déplacement':'lecture');
-  }
-
-  function setMove(on){
-    moving=on;
-    if(on && editing) setEdit(false);
-    body.classList.toggle('fx-move-mode',on);
-    moveBtn.textContent=on?'QUITTER DÉPLACEMENT':'DÉPLACER';
-    moveBtn.classList.toggle('active',on);
-    status.textContent=on?'déplacement':(editing?'édition':'lecture');
-  }
-
-  editBtn?.addEventListener('click',()=>setEdit(!editing));
-  moveBtn?.addEventListener('click',()=>setMove(!moving));
-  saveBtn?.addEventListener('click',saveAll);
-
-  resetBtn?.addEventListener('click',()=>{
-    movables.forEach(el=>{
-      el.dataset.fxX='0';
-      el.dataset.fxY='0';
-      el.style.transform='';
-    });
-    localStorage.removeItem(posKey);
-    status.textContent='positions remises à zéro';
-    setTimeout(()=>status.textContent=moving?'déplacement':'lecture',1400);
-  });
-
-  document.addEventListener('pointerdown',(e)=>{
-    if(!moving) return;
-    const el=e.target.closest('[data-fx-movable="1"]');
-    if(!el) return;
-    e.preventDefault();
-    const startX=parseFloat(el.dataset.fxX||'0');
-    const startY=parseFloat(el.dataset.fxY||'0');
-    drag={el, px:e.clientX, py:e.clientY, startX, startY};
-    el.setPointerCapture?.(e.pointerId);
-  });
-
-  document.addEventListener('pointermove',(e)=>{
-    if(!drag) return;
-    const dx=e.clientX-drag.px;
-    const dy=e.clientY-drag.py;
-    const x=drag.startX+dx;
-    const y=drag.startY+dy;
-    drag.el.dataset.fxX=x;
-    drag.el.dataset.fxY=y;
-    drag.el.style.transform=`translate(${x}px, ${y}px)`;
-  });
-
-  document.addEventListener('pointerup',()=>{
-    if(drag){
-      saveAll();
-      drag=null;
-    }
-  });
-
-  exportBtn?.addEventListener('click',()=>{
-    saveAll();
-    const clone=document.documentElement.cloneNode(true);
-    clone.querySelectorAll('[contenteditable]').forEach(el=>el.removeAttribute('contenteditable'));
-    clone.classList.remove('fx-editing','fx-move-mode');
-    const editor=clone.querySelector('#fx-editor'); if(editor) editor.remove();
-    const blob=new Blob(['<!DOCTYPE html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download='FLAIX_LANDING_EXPORT.html';
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
-  });
-
-  loadText();
-  loadPositions();
-  setEdit(false);
-  setMove(false);
-})();
-</script><script>
+<script>
 (function(){
   const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
   const canHover = matchMedia('(hover:hover)').matches;
@@ -5921,7 +5730,7 @@ button:focus-visible{
     '.card,.dbox,.offer-card,.dimension,.work-step,.asset-card,.path-item,.proof-item,.trust .cell,.chip'
   ).forEach(el=>{
     el.addEventListener('pointermove',e=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       const r=el.getBoundingClientRect();
       el.style.setProperty('--mx',(e.clientX-r.left)+'px');
       el.style.setProperty('--my',(e.clientY-r.top)+'px');
@@ -5931,14 +5740,14 @@ button:focus-visible{
   /* Original magnetic buttons. Disabled while using the internal layout editor. */
   document.querySelectorAll('.btn').forEach(b=>{
     b.addEventListener('pointermove',e=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       const r=b.getBoundingClientRect();
       const x=(e.clientX-r.left-r.width/2)*0.18;
       const y=(e.clientY-r.top-r.height/2)*0.18;
       b.style.transform='translate('+x+'px,'+(y-1)+'px)';
     });
     b.addEventListener('pointerleave',()=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       b.style.transform='';
     });
   });
@@ -5948,18 +5757,18 @@ button:focus-visible{
   const demo=document.querySelector('.demo');
   if(win && demo){
     demo.addEventListener('pointerenter',()=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       win.style.transition='transform .15s ease';
     });
     demo.addEventListener('pointermove',e=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       const r=win.getBoundingClientRect();
       const px=(e.clientX-r.left)/r.width-0.5;
       const py=(e.clientY-r.top)/r.height-0.5;
       win.style.transform='perspective(1600px) rotateX('+(-py*6+3)+'deg) rotateY('+(px*8)+'deg)';
     });
     demo.addEventListener('pointerleave',()=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       win.style.transition='transform .5s ease';
       win.style.transform='';
     });
@@ -5972,7 +5781,7 @@ button:focus-visible{
   if(hero && core){
     let tx=0,ty=0,cx=0,cy=0;
     hero.addEventListener('pointermove',e=>{
-      if(document.body.classList.contains('fx-move-mode')) return;
+      
       tx=(e.clientX/innerWidth-0.5)*30;
       ty=(e.clientY/innerHeight-0.5)*30;
     });
@@ -6014,7 +5823,7 @@ button:focus-visible{
 
       if(!reduce && canHover){
         card.addEventListener('pointermove',e=>{
-          if(document.body.classList.contains('fx-move-mode')) return;
+          
           const r=card.getBoundingClientRect();
           card.style.setProperty('--fx-mx',(e.clientX-r.left)+'px');
           card.style.setProperty('--fx-my',(e.clientY-r.top)+'px');
